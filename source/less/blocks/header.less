@@ -1,0 +1,115 @@
+.header__container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  background: url("../img/bgMobile.png") center center no-repeat;
+  background-size: cover;
+  height: 800px;
+  @media (min-width: @tablet-width) {
+    background: url("../img/bg.png") center center no-repeat;
+    background-size: contain;
+    height: 775px;
+  }
+  @media (min-width: @desktop-width) {
+    padding-top: 60px;
+    height: 1779px;
+  }
+}
+
+.header__navigation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  @media (min-width: @desktop-width) {
+    align-items: center;
+    margin-bottom: 150px;
+  }
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    width: 420px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 840px;
+  }
+}
+
+.header__subtitleInfo {
+  position: relative;
+  margin-bottom: 15px;
+  font-size: 10px;
+  line-height: 12px;
+  color: @text-color-accent;
+  text-transform: uppercase;
+  letter-spacing: 2.07px;
+  .basic-extraBold();
+  @media (min-width: @tablet-width) {
+    margin-bottom: 10px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 6px;
+  }
+}
+
+.header__subtitleInfo::before {
+  position: absolute;
+  content: '';
+  width: 25px;
+  height: 0.69px;
+  background-color: @text-color-accent;
+  left: 0;
+  bottom: -10px;
+}
+
+.header__title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 40px;
+  line-height: 50px;
+  .secondary-semi();
+  @media (min-width: @tablet-width) {
+    margin-bottom: 5px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-bottom: 30px;
+    font-size: 80px;
+    line-height: 100px;
+  }
+}
+
+.header__subtitleAction {
+  position: relative;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.header__subtitleAction::before {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 20px;
+  left: 85px;
+  bottom: 0;
+  background: url("../img/arrow_down.svg");
+  @media (min-width: @tablet-width) {
+    left: 100px;
+  }
+}
