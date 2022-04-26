@@ -1,0 +1,203 @@
+.content__container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 55px;
+  padding-bottom: 75px;
+  row-gap: 50px;
+  @media (min-width: @desktopL-width) {
+    row-gap: 200px;
+    padding-bottom: 200px;
+  }
+}
+
+.content__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: @desktopL-width) {
+    flex-direction: row-reverse;
+    align-items: center;
+    max-width: 1462px;
+    margin: 0 auto;
+  }
+}
+
+.content__wrapContentPicture {
+  align-self: center;
+  margin-bottom: 55px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 75px;
+  }
+  @media (min-width: @desktopL-width) {
+    margin-bottom: 0;
+    margin-left: 135px;
+  }
+}
+
+.content__picture {
+  width: 240px;
+  align-self: center;
+  @media (min-width: @tablet-width) {
+    width: 440px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 566px;
+  }
+}
+
+.content__wrapContentText {
+  display: flex;
+  flex-direction: column;
+  max-width: 530px;
+  @media (min-width: @tablet-width) {
+    max-width: 680px;
+  }
+  @media (min-width: @desktop-width) {
+    max-width: 960px;
+    margin-left: 55px;
+  }
+  @media (min-width: @desktopL-width) {
+    width: auto;
+    margin-left: 150px;
+  }
+}
+
+.content__subtitleAction {
+  position: relative;
+  margin-bottom: 20px;
+  margin-left: 146px;
+  font-size: 12px;
+  line-height: 15px;
+  color: @text-color-accent;
+  text-transform: uppercase;
+  letter-spacing: 4.5px;
+  .basic-extraBold();
+  @media (min-width: @tablet-width) {
+    margin-left: 270px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-left: 200px;
+    margin-bottom: 27px;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 6px;
+  }
+  @media (min-width: @desktopL-width) {
+    margin-left: 100px;
+  }
+}
+
+.content__subtitleAction::before {
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 1.5px;
+  background-color: @text-color-accent;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -60px;
+  @media (min-width: @tablet-width) {
+    width: 72px;
+    height: 2px;
+    left: -100px;
+  }
+}
+
+.content__subtitleAction::after {
+  position: absolute;
+  content: '01';
+  top: -65px;
+  left: -150px;
+  .basic-bold();
+  color: @text-color-basic;
+  opacity: 10%;
+  font-size: 156px;
+  line-height: 156px;
+  @media (min-width: @tablet-width) {
+    top: -105px;
+    left: -230px;
+    font-size: 240px;
+    line-height: 240px;
+  }
+  @media (min-width: @desktop-width) {
+    left: -255px;
+  }
+}
+
+.content__title {
+  margin: 0;
+  margin-bottom: 20px;
+  margin-left: 86px;
+  .secondary-semi();
+  font-size: 36px;
+  line-height: 43px;
+  @media (min-width: @tablet-width) {
+    margin-left: 170px;
+    font-size: 64px;
+    line-height: 77px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-left: 100px;
+    margin-bottom: 27px;
+  }
+  @media (min-width: @desktopL-width) {
+    margin-left: 0;
+    margin-bottom: 27px;
+  }
+}
+.content__text {
+  margin: 0;
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 32px;
+  .basic-bold();
+  @media (min-width: @desktop-width) {
+    margin-bottom: 27px;
+  }
+}
+
+.content__subtitleRead {
+  position: relative;
+  align-self: flex-end;
+  margin-right: 50px;
+  text-transform: lowercase;
+  color: @text-color-accent;
+  .basic-bold();
+  font-size: 16px;
+  line-height: 19px;
+  @media (min-width: @tablet-width) {
+    align-self: flex-start;
+  }
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.content__subtitleRead::before {
+  position: absolute;
+  content: '';
+  width: 24px;
+  height: 24px;
+  right: -50px;
+  background: url("../img/arrow_right.svg") center center no-repeat;
+}
+
+@media (min-width: @desktopL-width) {
+  .secondWrapper {
+    flex-direction: row;
+  }
+
+  .secondWrapper .content__wrapContentPicture {
+    margin-left: 0;
+    margin-right: 114px;
+  }
+}
+
+.secondWrapper .content__subtitleAction::after {
+  content: '02';
+}
+
+.thirdWrapper .content__subtitleAction::after {
+  content: '03';
+}
