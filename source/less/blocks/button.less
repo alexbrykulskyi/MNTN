@@ -1,25 +1,41 @@
 .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 40px;
-  margin: 0 auto;
-  border: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: #fff;
+  position: relative;
+}
+
+.button::before,
+.button::after {
+  position: absolute;
+  content: '';
+  top: -20%;
+  right: -10%;
+  bottom: -20%;
+  left: -10%;
+  transition: 0.3s;
+}
+
+.button::before {
+  border-top: 1px solid @text-color-accent;
+  border-bottom: 1px solid @text-color-accent;
+  transform: scaleX(0);
+}
+
+.button::after {
+  border-right: 1px solid @text-color-accent;
+  border-left: 1px solid @text-color-accent;
+  transform: scaleY(0);
+}
+
+.button:hover::before,
+.button:hover::after {
+  transform: scale(1.0);
 }
 
 /*Button popup*/
 
 .buttonToggle {
-  display: inline-block;
   position: absolute;
   top: 47%;
-  right: 0;
+  right: 20px;
   width: 24px;
   height: 24px;
   z-index: 10;
