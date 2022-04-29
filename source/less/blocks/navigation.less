@@ -3,7 +3,7 @@
     position: absolute;
     width: 100%;
     height: 100vh;
-    top: 0;
+    top: 60px;
     left: 0;
     transform: translateX(-150%);
     transition: transform ease-out 0.9s;
@@ -36,6 +36,7 @@
 .navigation__list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   row-gap: 40px;
   list-style: none;
   margin: 0;
@@ -49,6 +50,14 @@
 .navigation__link {
   color: @text-color-basic;
   text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 3px;
+  @media (min-width: @tablet-width) {
+    text-transform: none;
+    letter-spacing: normal;
+    font-weight: 500;
+  }
 }
 
 .navigation__buttonAccount {
