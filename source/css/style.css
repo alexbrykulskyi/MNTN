@@ -78,10 +78,10 @@ img {
 .button::after {
   position: absolute;
   content: '';
-  top: -20%;
-  right: -10%;
-  bottom: -20%;
-  left: -10%;
+  top: -5px;
+  right: -10px;
+  bottom: -5px;
+  left: -10px;
   transition: 0.3s;
 }
 .button::before {
@@ -253,7 +253,7 @@ img {
   justify-content: space-between;
   align-items: center;
 }
-.head--fixed {
+.head--fixed .header__container {
   transition: 0.3s;
   background-color: #a6a197;
 }
@@ -358,6 +358,8 @@ img {
   font-size: 15px;
   font-weight: 700;
   line-height: 18px;
+  text-decoration: none;
+  color: #FBD784;
 }
 @media (min-width: 767px) {
   .banner__subtitleAction {
@@ -768,7 +770,7 @@ img {
 }
 @media (min-width: 1399px) {
   .footer__bottom {
-    position: relative;
+    position: absolute;
     margin-top: -30px;
     text-align: left;
   }
